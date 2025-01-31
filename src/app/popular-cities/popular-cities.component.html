@@ -1,0 +1,13 @@
+
+<div class="popular-cities-container">
+    <mat-card *ngFor="let city of popularCities" class="city-card" (click)="navigateToCityWeather(city.name)">
+      <mat-card-header>
+        <div class="city-card-header">
+          <img mat-card-image [src]="city.image" alt="{{city.name}} image" class="city-image">
+          <mat-card-title class="city-name">{{city.name}}</mat-card-title>
+          <mat-card-subtitle class="country-name">{{city.country}}</mat-card-subtitle>
+        </div>
+      </mat-card-header>
+    </mat-card>
+  </div>
+  

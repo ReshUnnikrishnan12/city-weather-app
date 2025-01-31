@@ -1,0 +1,11 @@
+<div class="search-container">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <h1 class="app-title">Sky Watch</h1>
+    <mat-form-field appearance="outline" class="search-field">
+      <mat-label>Search city...</mat-label>
+      <input matInput [(ngModel)]="cityName" (keyup.enter)="searchCity()">
+      <button mat-icon-button matSuffix (click)="searchCity()">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>

@@ -1,0 +1,30 @@
+
+
+.background-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+  }
+  
+  .background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #E0FFFF, #87CEFA);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1; 
+  }
+
+  .app-title {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+
