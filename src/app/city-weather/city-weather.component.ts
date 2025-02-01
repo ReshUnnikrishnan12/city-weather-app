@@ -34,7 +34,7 @@ export class CityWeatherComponent {
         });
         this.weatherService.getWeatherForecast(this.cityName).subscribe(data => {
           
-          this.forecastData = data.daily; 
+          this.forecastData = data.daily.slice(0, 7);; 
           console.log(data);
         });
       }
