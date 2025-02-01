@@ -30,12 +30,10 @@ export class CityWeatherComponent {
         });
         this.imageService.getCityImage(this.cityName).subscribe(imageUrl => {
           this.backgroundImage = imageUrl;
-          console.log(this.backgroundImage);
         });
         this.weatherService.getWeatherForecast(this.cityName).subscribe(data => {
           
-          this.forecastData = data.daily.slice(0, 7);; 
-          console.log(data);
+          this.forecastData = data.daily.slice(0, 7);
         });
       }
     });
@@ -47,7 +45,6 @@ export class CityWeatherComponent {
   }
 
   setWeatherBackground() {
-    console.log(JSON.stringify(this.weatherData));
     const weatherCondition = this.weatherData.weather[0].main.toLowerCase(); 
     this.backgroundClass = this.getWeatherBackground(weatherCondition);
   }

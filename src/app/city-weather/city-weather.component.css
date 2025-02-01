@@ -52,7 +52,7 @@
 
 .forecast {
     display: flex;
-    margin-top: 8%;
+    margin-top: 12%;
     margin-right: 1%;
     color: #6a6a6a;
     font-size: 12px;
@@ -88,7 +88,6 @@
 }
 
 .weather-info-part1 {
-  padding-bottom: 50px;
   width: 100%;
 }
 
@@ -198,10 +197,6 @@
   .feels-like {
     font-size: 16px;
   }
-
-  .small-details {
-    margin-right: 20px;
-  }
 }
 
 .forecast-item{
@@ -223,8 +218,8 @@
 .small-details{
   width: 20%;
   height:100%;
-  margin-right: 5%;
-  
+  margin-right: 3%;
+  font-size: 13px;
 }
 
 @keyframes snowfall {
