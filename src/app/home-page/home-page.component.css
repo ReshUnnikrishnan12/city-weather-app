@@ -1,9 +1,8 @@
 
 
 .background-container {
-    position: relative;
-    height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white; 
@@ -15,7 +14,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     background: linear-gradient(180deg, #E0FFFF, #87CEFA);
     background-size: cover;
     background-position: center;

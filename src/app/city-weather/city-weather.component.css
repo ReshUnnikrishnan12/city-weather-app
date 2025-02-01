@@ -25,6 +25,7 @@
   width: 60%;
   position: relative;
   z-index: 2;
+  height:100%;  
 }
 
 .weather-image {
@@ -40,6 +41,8 @@
   text-align: left;
   margin-left: 5%;
   margin-top: 10%;
+  height: 100%;
+  width: 100%;
 }
 
 .weather-info h2 {
@@ -74,6 +77,8 @@
   display: flex;
   align-items: center;
   gap: 50px;
+  height: 100%;
+  width: 100%;
 }
 
 .feels-like {
@@ -84,6 +89,7 @@
 
 .weather-info-part1 {
   padding-bottom: 50px;
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
