@@ -11,7 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { WeatherService } from './weather.service';
+import { WeatherService } from './services/weather.service';
 import { SearchCityComponent } from './search-city/search-city.component';
 import { PopularCitiesComponent } from './popular-cities/popular-cities.component';
 import { CityWeatherComponent } from './city-weather/city-weather.component';

@@ -6,7 +6,7 @@
     <div class="overall-card">
         <div class="weather-card">
             <div class="weather-info">
-                <div class="weather-info-part1">
+                <div class="weather-info-part1" *ngIf="weatherData && weatherData.sys">
                     <h2>{{ weatherData.name }}, {{ weatherData.sys.country }}</h2>
                     <p>{{ weatherData.weather[0].description | titlecase }}</p>
                     

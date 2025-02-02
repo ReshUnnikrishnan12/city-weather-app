@@ -7,7 +7,7 @@ import { Observable, map } from 'rxjs';
 })
 export class ImageService {
 
-  private UNSPLASH_ACCESS_KEY = 'xUK66IBDUyvH5vzT4lzYlMoeb0dTHvbjFxmKWdMm5TI'; // Replace with your actual API key
+  private UNSPLASH_ACCESS_KEY = 'xUK66IBDUyvH5vzT4lzYlMoeb0dTHvbjFxmKWdMm5TI'; 
   private UNSPLASH_API_URL = 'https://api.unsplash.com/search/photos';
 
   constructor(private http: HttpClient) {}

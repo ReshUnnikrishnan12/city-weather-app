@@ -22,7 +22,6 @@ export class WeatherService {
     
     return this.http.get<any>(geocodeUrl).pipe(
       switchMap((data: any) => {
-        console.log("Geocode Response:", data); 
         if (!data.coord) {
           throw new Error("Invalid geocode response: No coordinates found.");
         }
@@ -30,8 +29,6 @@ export class WeatherService {
         const lon = data.coord.lon;
   
         const forecastUrl = `${this.forecastApiUrl}?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&appid=${this.apiKey}&units=metric`;
-  
-        console.log("Fetching Forecast from:", forecastUrl);
   
         return this.http.get<any>(forecastUrl); 
       }),

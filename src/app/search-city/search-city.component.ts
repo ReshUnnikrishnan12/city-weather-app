@@ -13,7 +13,6 @@ export class SearchCityComponent {
   constructor(private router: Router) {}
 
   searchCity() {
-    console.log("inside search");
     this.router.navigate(['/weather', this.cityName]);
   }
 

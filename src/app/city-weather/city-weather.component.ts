@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { WeatherService } from '../weather.service';
+import { WeatherService } from '../services/weather.service';
 import { ImageService } from '../services/image.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { ImageService } from '../services/image.service';
   styleUrls: ['./city-weather.component.css']
 })
 export class CityWeatherComponent {
-  weatherData: any;
+  weatherData: any = {};
   cityName: string = '';
   backgroundImage: string = '';
   forecastData: any[] = [];
@@ -23,10 +23,11 @@ export class CityWeatherComponent {
     this.route.paramMap.subscribe(params => {
       this.cityName = params.get('city') || '';
       if (this.cityName) {
-        
         this.weatherService.getWeather(this.cityName).subscribe(data => {
-          this.weatherData = data;
-          this.setWeatherBackground();
+          if (data) {
+            this.weatherData = data;
+            this.setWeatherBackground();
+          }
         });
         this.imageService.getCityImage(this.cityName).subscribe(imageUrl => {
           this.backgroundImage = imageUrl;
