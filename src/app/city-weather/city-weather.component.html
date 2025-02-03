@@ -39,6 +39,8 @@
         <div class="weather-image" [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}"></div>
 
 </div>
-
+<div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
 </div>
 

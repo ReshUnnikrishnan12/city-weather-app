@@ -1,4 +1,9 @@
-
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
 .popular-cities-container {
     display: flex;

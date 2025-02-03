@@ -362,4 +362,11 @@
   background: rgba(255, 255, 255, 0.7);
   animation: lightningFlash 2s infinite;
 }
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
   

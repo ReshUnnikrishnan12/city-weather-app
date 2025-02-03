@@ -1,4 +1,6 @@
-
+<div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
 <div class="popular-cities-container">
     <mat-card *ngFor="let city of popularCities" class="city-card" (click)="navigateToCityWeather(city.name)">
       <mat-card-header>

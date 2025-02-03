@@ -21,16 +21,24 @@ export class PopularCitiesComponent implements OnInit{
     { name: 'Montreal', country: 'Canada', image: '' },
   ];
 
+  errorMessage: string = '';
+
   constructor(private router: Router, private imageService: ImageService) {}
 
   ngOnInit(): void {
     this.popularCities.forEach(city => {
-      this.imageService.getCityImage(city.name).subscribe(imageUrl => {
-        city.image = imageUrl;
+      this.imageService.getCityImage(city.name).subscribe({
+        next: (imageUrl) => {
+          city.image = imageUrl;
+        },
+        error: (err) => {
+          console.error(`Error fetching image for ${city.name}:`, err);
+          city.image = 'assets/default-city.jpg'; // Fallback image
+          this.errorMessage = 'Some city images could not be loaded. Please try again later.';
+        }
       });
     });
   }
-
   navigateToCityWeather(cityName: string) {
     this.router.navigate(['/weather', cityName]);
   }
